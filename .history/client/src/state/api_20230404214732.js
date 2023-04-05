@@ -67,5 +67,4 @@ export const {
   useGetSalesQuery,
   useGetAdminsQuery,
   useGetUserPerformanceQuery,
-  useGetDashboardQuery,
 } = api;

@@ -24,11 +24,11 @@ export const getUserPerformance = async(req, res) => {
                     as: "affiliateStats",
                 }
             },
-            {$unwind: "$affiliateStats"},
+            {$unwind: "$affiliateStats"}
         ])
 
         const saleTransactions = await Promise.all(
-            userWithStats[0].affiliateStats.affiliateSales.map((id) => {
+            userwithStats[0].affiliateStats.affiliateSales.map((id) => {
                 return Transaction.findById(id)
             })
         )
